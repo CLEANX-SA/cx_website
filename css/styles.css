@@ -634,19 +634,20 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--space-4) var(--space-6);
-  background-color: var(--color-gray-100);
-  border-radius: var(--border-radius-md);
-  font-weight: var(--font-weight-semibold);
-  color: var(--color-gray-500);
-  font-size: var(--font-size-sm);
-  white-space: nowrap;
+  filter: grayscale(100%);
+  opacity: 0.6;
   transition: all var(--transition-base);
 }
 
 .clients__item:hover {
-  background-color: var(--color-gray-200);
-  color: var(--color-gray-700);
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+.clients__item img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
 }
 
 /* --- Services Detail --- */
